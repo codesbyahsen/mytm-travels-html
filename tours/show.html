@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYTM - Travels</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/utils/carousel.min.css">
+    <!-- Flatpickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Nice Select CDN CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <!-- Lite Pickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/custom/style1.css" rel="stylesheet">
+    <link href="assets/css/custom/style.css" rel="stylesheet">
+
+    <style>
+        label.form-check-label.d-flex {
+            gap: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+    
+    <section class="tour-search-detail my-4">
+        <div class="container">
+            <nav class="mt-4" style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item cstm-style"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item cstm-style cst-style-act active"><a href="#">Tour</a></li>
+                    <li class="breadcrumb-item cst-style-act active" aria-current="page">Tour Details</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12 my-2">
+                            <div class="main_imag">
+                                <img src="assets/images/mainImgTour.jpg" alt="Tour Place Image">
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-2">
+                            <div class="sub_imag">
+                                <img src="assets/images/tourSub2.jpg" alt="Tour Place Image">
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-2">
+                            <div class="sub_imag">
+                                <img src="assets/images/tourSub1.jpg" alt="Tour Place Image">
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-2">
+                            <div class="sub_imag">
+                                <img src="assets/images/tourSub3.jpg" alt="Tour Place Image">
+                            </div>
+                        </div>
+                        <div class="col-md-12 my-4">
+                            <h4 class="mb-2">Itinerary</h4>
+                            <p class="m-0">Start in Kuala Lumpur and end in Singapore! With the In-depth Cultural tour
+                                Malaysia and Singapore explorer, you have a 9 days tour package taking you through Kuala
+                                Lumpur,
+                                Malaysia and 4 other destinations in Asia. Malaysia and Singapore explorer includes
+                                accommodation in a hotel as well as an expert guide, meals, transport.
+                            </p>
+                            <div class="accordion accordion-flush mt-5" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne"> <img class="pe-3"
+                                                src="assets/images/infoIcon.svg" alt="">
+                                            Introduction
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">
+                                            <p class="m-0">Genting Highlands and Batu Caves</p>
+                                            <p class="m-0">Cameron Highlands</p>
+                                            <p class="m-0">Historical Melaka Tour
+                                            </p>
+                                            <p class="m-0">Singapore Flyer and Gardens by the Bay
+                                            </p>
+                                            <p class="m-0">Sentosa</p>
+                                            <p class="m-0">Universal Studios
+                                            </p>
+                                            <p class="m-0">Singapore Night Safari
+                                            </p>
+                                            <p class="m-0">COVID SAFE HOLIDAY</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            <img class="pe-3" src="assets/images/locatIcon.svg" alt="">Day 1: Arrival and day
+                                            for explore city
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            second
+                                            item's accordion body. Let's imagine this being filled with some actual
+                                            content.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            <img class="pe-3" src="assets/images/sceondIcon.svg" alt="">Day 2: Genting
+                                            Highlands and Batu Caves
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            third
+                                            item's accordion body. Nothing more exciting happening here in terms of
+                                            content, but
+                                            just filling up the space to make it look, at least at first glance, a bit
+                                            more
+                                            representative of how this would look in a real-world application.</div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseDay3"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            <img class="pe-3" src="assets/images/sceondIcon.svg" alt="">Day 3: Cameron
+                                            Highlands
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseDay3" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            third
+                                            item's accordion body. Nothing more exciting happening here in terms of
+                                            content, but
+                                            just filling up the space to make it look, at least at first glance, a bit
+                                            more
+                                            representative of how this would look in a real-world application.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseDay4"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            <img class="pe-3" src="assets/images/sceondIcon.svg" alt="">Day 4: Historical
+                                            Melaka
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseDay4" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            third
+                                            item's accordion body. Nothing more exciting happening here in terms of
+                                            content, but
+                                            just filling up the space to make it look, at least at first glance, a bit
+                                            more
+                                            representative of how this would look in a real-world application.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseDay5"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            <img class="pe-3" src="assets/images/sceondIcon.svg" alt="">Day 5: Kuala Lampur to
+                                            Singapore and Singapore Night Safari
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingDay5" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            third
+                                            item's accordion body. Nothing more exciting happening here in terms of
+                                            content, but
+                                            just filling up the space to make it look, at least at first glance, a bit
+                                            more
+                                            representative of how this would look in a real-world application.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseDay6"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            <img class="pe-3" src="assets/images/sceondIcon.svg" alt="">Day 6: Universal
+                                            Studios Singapore™ Fun Day
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseDay6" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            third
+                                            item's accordion body. Nothing more exciting happening here in terms of
+                                            content, but
+                                            just filling up the space to make it look, at least at first glance, a bit
+                                            more
+                                            representative of how this would look in a real-world application.</div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseDay7"
+                                            aria-expanded="false" aria-controls="flush-collapseDay7">
+                                            <img class="pe-3" src="assets/images/sceondIcon.svg" alt="">Day 7: Sentosa Island
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseDay7" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            third
+                                            item's accordion body. Nothing more exciting happening here in terms of
+                                            content, but
+                                            just filling up the space to make it look, at least at first glance, a bit
+                                            more
+                                            representative of how this would look in a real-world application.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseDay8"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            <img class="pe-3" src="assets/images/sceondIcon.svg" alt="">Day 8: Singapore Flyer
+                                            and Gardens by the Bay
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseDay8" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            third
+                                            item's accordion body. Nothing more exciting happening here in terms of
+                                            content, but
+                                            just filling up the space to make it look, at least at first glance, a bit
+                                            more
+                                            representative of how this would look in a real-world application.</div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFour">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                            aria-expanded="false" aria-controls="flush-collapseFour">
+                                            <img class="pe-3" src="assets/images/flageicon.svg" alt="">Day 9: Singapore
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the class. This is the third
+                                            item's accordion body. Nothing more exciting happening here in terms of
+                                            content, but
+                                            just filling up the space to make it look, at least at first glance, a bit
+                                            more
+                                            representative of how this would look in a real-world application.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <h4 class="my-4">What's Included</h4>
+                            <div class="accordion accordion-flush mt-5" id="accordionFlushExample2">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFive">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                            aria-expanded="false" aria-controls="flush-collapseFive"> <img class="pe-3"
+                                                src="assets/images/tickMark.svg" alt="">
+                                            Accommodation
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample2">
+                                        <div class="accordion-body ps-5 ms-1">
+                                            <p class="m-0">Kuala Lampur : 4 night in Hotel Impiana <br> KLCC ( 4 Star )
+                                                /
+                                                equivalent
+                                            </p>
+                                            <p class="m-0">Singapore: 4 Night in Robertson Quay ( 4 <br> Star ) /
+                                                equivalent</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFive">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseGuide"
+                                            aria-expanded="false" aria-controls="flush-collapseFive"> <img class="pe-3"
+                                                src="assets/images/tickMark.svg" alt="">
+                                            Guide
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseGuide" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample2">
+                                        <div class="accordion-body ps-5 ms-1">
+                                            <p class="m-0">Kuala Lampur : 4 night in Hotel Impiana <br> KLCC ( 4 Star )
+                                                /
+                                                equivalent
+                                            </p>
+                                            <p class="m-0">Singapore: 4 Night in Robertson Quay ( 4 <br> Star ) /
+                                                equivalent</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFive">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseMeal"
+                                            aria-expanded="false" aria-controls="flush-collapseFive"> <img class="pe-3"
+                                                src="assets/images/tickMark.svg" alt="">
+                                            Meals
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseMeal" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample2">
+                                        <div class="accordion-body ps-5 ms-1">
+                                            <p class="m-0">Kuala Lampur : 4 night in Hotel Impiana <br> KLCC ( 4 Star )
+                                                /
+                                                equivalent
+                                            </p>
+                                            <p class="m-0">Singapore: 4 Night in Robertson Quay ( 4 <br> Star ) /
+                                                equivalent</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFive">
+                                        <button class="accordion-button bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTrans"
+                                            aria-expanded="false" aria-controls="flush-collapseFive"> <img class="pe-3"
+                                                src="assets/images/tickMark.svg" alt="">
+                                            Transport
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTrans" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample2">
+                                        <div class="accordion-body ps-5 ms-1">
+                                            <p class="m-0">Kuala Lampur : 4 night in Hotel Impiana <br> KLCC ( 4 Star )
+                                                /
+                                                equivalent
+                                            </p>
+                                            <p class="m-0">Singapore: 4 Night in Robertson Quay ( 4 <br> Star ) /
+                                                equivalent</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingSix">
+                                        <button class="accordion-button  bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                                            aria-expanded="false" aria-controls="flush-collapseSix">
+                                            <img class="pe-3" src="assets/images/crossIcon.svg" alt="">Flights
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample2">
+                                        <div class="accordion-body ps-5 ms-1">Placeholder content for this accordion,
+                                            which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            second
+                                            item's accordion body. Let's imagine this being filled with some actual
+                                            content.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <h4 class="my-4">Reviews About This Operator</h4>
+                            <div class="d-flex justify-content-between main_ope sub_main_ope">
+                                <div class="d-flex gap-4">
+                                    <img src="assets/images/flag.svg" alt="">
+                                    <div class="oprdev">
+                                        <h5 class="m-0">Tour Operator</h5>
+                                        <p class="m-0">Gulf Tours</p>
+                                    </div>
+                                </div>
+                                <label class="form-check-label">
+                                    <img src="assets/images/revStar.svg" alt="">
+                                    <img src="assets/images/revStar.svg" alt="">
+                                    <img src="assets/images/revStar.svg" alt="">
+                                    <img src="assets/images/revStar.svg" alt="">
+                                    <img src="assets/images/revStar.svg" alt="">
+                                </label>
+                            </div>
+                            <div class="pt-4">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <h5 class="m-0">Ahmad Alam</h5>-
+                                    <p class="m-0">July 7th, 2022</p>
+                                </div>
+                                <label class="form-check-label">
+                                    <img src="assets/images/revStar.svg'" alt="">
+                                    <img src="assets/images/revStar.svg'" alt="">
+                                    <img src="assets/images/revStar.svg'" alt="">
+                                    <img src="assets/images/revStar.svg'" alt="">
+                                    <img src="assets/images/revStar.svg'" alt="">
+
+                                </label>
+                                <div class="text-container">
+                                    <p id="text" class="m-0">
+                                        The transport arrangements are marvelous. The highlight, i.e. swimming &
+                                        snorkeling in
+                                        Phi Phi Island is very good. The transport arrangements are marvelous. The
+                                        highlight,
+                                        i.e. swimming & snorkeling in Phi Phi Island is very good.
+                                    </p>
+                                </div>
+                                <a id="toggleButton" class="text-dark show-more">Show more</a>
+                            </div>
+                            <hr>
+                            <h4 class="mb-2">Frequently Asked Questions</h4>
+                            <p class="m-0">We are there for you! If you have any questions about this tour, then please
+                                don't hesitate to contact us 24/7 and we will get back to you within 2 hours!
+                            </p>
+                            <div class="d-flex justify-content-between main_ope mt-4 mb-5">
+                                <div class="d-flex gap-4">
+                                    <img src="assets/images/flag-blk.svg" alt="">
+                                    <div class="oprdev">
+                                        <h5 class="m-0">Got a question about this tour?</h5>
+                                        <p class="m-0">Reach out to our travel experts.</p>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-outline-warning fw-bold">Ask A Question</button>
+                            </div>
+                            <h4 class="mb-2">Cancellation Policy</h4>
+                            <p class="m-0">50% of the total amount will be deducted if cancellation notified 7 days
+                                prior to
+                                the trip. 75% of the total amount will be deducted if cancellation notified 4 days prior
+                                to the
+                                trip. 100% of the total amount will be deducted if cancellation notified within the last
+                                3 days
+                                prior to the trip unless the trip is canceled by the management.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="m-0 fw-bold">
+                        Singapore-Malaysia Holiday Packages
+                    </h3>
+                    <div class="d-flex justify-content-between mt-2 align-items-center">
+                        <p class="m-0 fw-bold">9 Days</p>
+                        <label class="form-check-label re-star-label d-flex align-items-center">
+                            <img src="assets/images/revStar.svg" alt="">
+                            <img src="assets/images/revStar.svg" alt="">
+                            <img src="assets/images/revStar.svg" alt="">
+                            <img src="assets/images/revStar.svg" alt="">
+                            <img src="assets/images/revStar.svg" alt="">
+                            <p class="mb-0 mx-1 mnt-1 styP w-100 ps-4">12 reviews</p>
+                        </label>
+                    </div>
+                    <hr>
+                    <span class="badge bg-warning text-dark mx-2 my-2">8N/9D</span>
+                    <span class="badge bg-light text-dark mx-2 my-2">Featured</span>
+                    <span class="badge bg-light text-dark mx-2 my-2">87% off</span>
+                    <span class="badge bg-light text-dark mx-2 my-2">In Depth Culture</span>
+                    <span class="badge bg-light text-dark mx-2 my-2">Family</span>
+                    <span class="badge bg-light text-dark mx-2 my-2">Private</span>
+                    <div class="row my-3">
+                        <div class="col-md-6">
+                            <h6 class="mb-1">Tour Operator:</h6>
+                            <p class="text-muted">Indogusto</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="mb-1">Max group size:</h6>
+                            <p class="text-muted">10</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="mb-1">Age range:</h6>
+                            <p class="text-muted">6 to 80</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="mb-1">Tour ID:</h6>
+                            <p class="text-muted">164357</p>
+                        </div>
+                    </div>
+                    <div class="tour-price-box my-2">
+                        <p class="m-0 text-muted">From</p>
+                        <p class="m-0 text-muted">PKR <span class="styleprice">156,000</span>Per Person</p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 mt-2 mb-3">
+                                <div class="adultPass">
+                                    <div class="input-group p-0" id="passanger-section">
+                                        <span class="input-group-text bg-transparent border-0">
+                                            <img src="assets/images/avtar.svg" alt="">
+                                        </span>
+                                        <input type="text" placeholder="1 Adult" onclick="toggleText(event)"
+                                            name="totalManualPassengerdisplay" class="form-select border-0 "
+                                            value="1 customers(s)" id="totalManualPassengerdisplay" readonly>
+                                        <input type="hidden" name="totalManualPassenger" id="totalManualPassenger"
+                                            value="1">
+
+                                        <div id="myId" class="passengerCont" style="display:none;">
+                                            <div class="adultRow" style="padding-top:16px;">
+                                                <label>Adults <small class="d-block">11+ yrs</small></label>
+                                                <div class="quantity">
+                                                    <a href="javascript:;" class="passCount quantity__minus"
+                                                        data-type='madult' data-op='minus'>
+                                                        <span>-</span>
+                                                    </a>
+                                                    <input name="madult" id="madult" type="text"
+                                                        class="quantity__input pt-0" value="">
+                                                    <a href="javascript:;" class="passCount quantity__plus"
+                                                        data-type='madult' data-op='add'>
+                                                        <span>+</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="adultRow">
+                                                <label>Childerns <small class="d-block">2-11 yrs</small></label>
+                                                <div class="quantity1">
+                                                    <a href="javascript:;" class="passCount quantity__minus"
+                                                        data-type='mchildren' data-op='minus'>
+                                                        <span>-</span>
+                                                    </a>
+                                                    <input name="mchildren" id="mchildren" type="text"
+                                                        class="quantity__input1" value="">
+                                                    <a href="javascript:;" class="passCount quantity__plus"
+                                                        data-type='mchildren' data-op='add'>
+                                                        <span>+</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="adultRow">
+                                                <label>Infant <small class="d-block">2 yrs</small></label>
+                                                <div class="quantity1">
+                                                    <a href="javascript:;" class="passCount quantity__minus"
+                                                        data-type='minfant' data-op='minus'>
+                                                        <span>-</span>
+                                                    </a>
+                                                    <input name="minfant" id="minfant" type="text"
+                                                        class="quantity__input1" value="">
+                                                    <a href="javascript:;" class="passCount quantity__plus"
+                                                        data-type='minfant' data-op='add'>
+                                                        <span>+</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <a class="btn btn-continue" href="payment-option.html" type="button">Check
+                                    Availability</a>
+                            </div>
+                            <div class="col-md-12 my-2">
+                                <div class="d-flex gap-2 justify-content-center">
+                                    <img src="assets/images/bx_calendar.svg" alt="">
+                                    <div class="datetxt">
+                                        <p class="text-muted m-0">From<span class="mx-1">05-16-2023</span>To<span
+                                                class="mx-1">05-16-2023</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-tour-details my-2">
+                        <div class="righmainCard mb-2">
+                            <h5 class="hdr-text2">Need Help?</h5>
+                        </div>
+                        <div class="d-flex px-3 py-1 gap-2">
+                            <img src="
+                            assets/images/phoneIcon.svg" alt="">
+                            <div class="helDev">
+                                <p class="m-0 righttxtCard">Call Us on</p>
+                                <a href="tel:+92-123-456789" class="hedevBottxt">+92-123-456789</a>
+                            </div>
+                        </div>
+                        <div class="d-flex px-3 py-1 gap-2">
+                            <img src="assets/images/emailIcon.svg" alt="">
+                            <div class="helDev">
+                                <p class="m-0 righttxtCard">Email Us on</p>
+                                <a href="mailto:info@Geotravels.pk" class="hedevBottxt">info@Geotravels.pk</a>
+                            </div>
+                        </div>
+                        <div class="d-flex px-3 py-1 gap-2">
+                            <img src="assets/images/chatIcon.svg" alt="">
+                            <div class="helDev">
+                                <p class="m-0 righttxtCard">What’s app chat</p>
+                                <a href="" class="hedevBottxt">0312-1234567</a>
+                            </div>
+                        </div>
+                        <div class="mt-4 px-3">
+                            <p class="m-0 dayTxt">Monday to Saturday</p>
+                            <p class="timeTxtday">09:00am to 06:00pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="downlaod-app-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="app-content">
+                        <h1 class="app-heading mb-3">Download This App!</h1>
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero
+                            et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia nostra, per inceptos himenaeos.</p>
+                        <div class="store-img-box d-flex align-items-center">
+                            <img src="assets/images/play-store.png" alt="play-store" class="me-2">
+                            <img src="assets/images/app-store.png" alt="app-store">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="app-img-box">
+                        <img src="assets/images/app-img.png" class="img-fluid" alt="photo">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <!-- Popper CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Date Pickr JS -->
+    <script src="assets/js/utils/picker.js"></script>
+    <script src="assets/js/utils/picker.date.js"></script>
+    <!-- Moment CDN JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- Lite Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <!-- Nice Select jQuery CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
+    <!-- Flat Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Common JS -->
+    <script src="assets/js/common-js.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom/main.js"></script>
+    <script src="assets/js/custom/search.js"></script>
+
+    <script>
+        var textContainer = document.querySelector('.text-container');
+        var toggleButton = document.getElementById('toggleButton');
+        var originalText = document.getElementById('text').textContent;
+
+        toggleButton.addEventListener('click', function () {
+            if (toggleButton.textContent === 'Show more') {
+                textContainer.style.whiteSpace = 'normal';
+                toggleButton.textContent = 'Show less';
+            } else {
+                textContainer.style.whiteSpace = 'nowrap';
+                textContainer.style.overflow = 'hidden';
+                textContainer.style.textOverflow = 'ellipsis';
+                toggleButton.textContent = 'Show more';
+            }
+        });
+    </script>
+</body>
+
+</html>
