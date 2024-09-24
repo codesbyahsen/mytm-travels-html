@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYTM - Travels</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/utils/carousel.min.css">
+    <!-- Flatpickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Nice Select CDN CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <!-- Lite Pickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/custom/style1.css" rel="stylesheet">
+    <link href="assets/css/custom/style.css" rel="stylesheet">
+
+    <style>
+        label.form-check-label.d-flex {
+            gap: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <section class="banner-ins tour-banner">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item bc"><a href="#">Home</a></li>
+
+                    <li class="breadcrumb-item active" aria-current="page">Tours</li>
+                </ol>
+            </nav>
+            <div class="insurance-search-wrapper">
+
+                <form class="manage-ins-form pt-2" action="">
+                    <div class="form-items tour-search row">
+                        <div class="col-md-5 touClas" style="padding-left: 7px;">
+                            <div class="tourSearchfield">
+                                <label>Destination</label>
+                                <select data-display="Select destination" id="destinationSelect">
+                                    <option value="" disabled selected>Select Desination</option>
+                                    <option value="1">New York</option>
+                                    <option value="2">London</option>
+                                    <option value="3">Tokyo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-5 touClas" style="padding-left: 7px;">
+                            <div class="tourSearchfield">
+                                <label>Duration</label>
+                                <select data-display="Select destination" id="destinationSelect">
+                                    <option value="" disabled selected>Select Duration</option>
+                                    <option value="1">2 days</option>
+                                    <option value="2">3 days</option>
+                                    <option value="3">6 days</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="column-cut">
+                                <button class="btn btn-continue"> Search </button>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+    <main>
+        <section class="filter_section">
+            <div class="container">
+                <div class="filter_flex py-4">
+                    <div class="filter_img">
+                        <img src="assets/images/filter_icon.svg" alt="">
+                        <p class="filter_txt m-0">Filters</p>
+                    </div>
+
+
+                    <div class="rang_dropdown">
+                        <div class="dropdown drop_arrow">
+                            <button class="btn btn-secondary dropdown-toggle btn_range_drp" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Price Range
+                            </button>
+                            <ul class="dropdown-menu range_drop_down">
+                                <div class="price-input">
+                                    <div class="field">
+                                        <span>Rs.</span>
+                                        <input type="number" class="input-min price_style" value="25200" readonly>
+                                    </div>
+                                    <div class="separator">-</div>
+                                    <div class="field">
+                                        <span>Rs.</span>
+                                        <input type="number" class="input-max price_style" value="75000" readonly>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="range-input">
+                                    <input type="range" class="range-min" min="0" max="100000" value="25200" step="100"
+                                        readonly>
+                                    <input type="range" class="range-max" min="0" max="100000" value="75000" step="100"
+                                        readonly>
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="about_stops">
+                        <div class="dropdown drop_arrow">
+                            <button class="btn btn-secondary dropdown-toggle btn_range_drp" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Stops
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault1"
+                                        value="NonStop" id="NonStop" checked>
+                                    <label class="form-check-label flight-class-label" for="NonStop">
+                                        Nonestop
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault1"
+                                        value="1 stop" id="oneStop">
+                                    <label class="form-check-label flight-class-label" for="oneStop">
+                                        1 Stop
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault1"
+                                        value="2 Stop" id="twoStop">
+                                    <label class="form-check-label flight-class-label" for="twoStop">
+                                        2 Stop
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault1"
+                                        value="3 Stop" id="threeStop">
+                                    <label class="form-check-label flight-class-label" for="threeStop">
+                                        First Class
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="about_airlines">
+                        <div class="dropdown drop_arrow">
+                            <button class="btn btn-secondary dropdown-toggle btn_range_drp" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Airlines
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault2"
+                                        value="PIA" id="PIA" checked>
+                                    <label class="form-check-label flight-class-label" for="PIA">
+                                        PIA
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault2"
+                                        value="Qatar Airways" id="qatarAirways">
+                                    <label class="form-check-label flight-class-label" for="qatarAirways">
+                                        Qatar Airways
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault2"
+                                        value="Emirates" id="emirate">
+                                    <label class="form-check-label flight-class-label" for="emirate">
+                                        Emirates
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault2"
+                                        value="Air Sial" id="airSial">
+                                    <label class="form-check-label flight-class-label" for="airSial">
+                                        Air Sial
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="about_depTime">
+                        <div class="dropdown drop_arrow">
+                            <button class="btn btn-secondary dropdown-toggle btn_range_drp" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Depart Times
+                            </button>
+                            <ul class="dropdown-menu">
+                                <div class="twoCheck_flex">
+                                    <li class="check_flex">
+                                        <input class="form-check-input flight-class" type="radio"
+                                            name="flexRadioDefault3" value="02:00 AM" id="first" checked>
+                                        <label class="form-check-label flight-class-label" for="first">
+                                            02:00 AM
+                                        </label>
+                                    </li>
+                                    <li class="check_flex">
+                                        <input class="form-check-input flight-class" type="radio"
+                                            name="flexRadioDefault3" value="02:30 PM" id="second">
+                                        <label class="form-check-label flight-class-label" for="second">
+                                            02:30 PM
+                                        </label>
+                                    </li>
+                                </div>
+                                <div class="twoCheck_flex">
+                                    <li class="check_flex">
+                                        <input class="form-check-input flight-class" type="radio"
+                                            name="flexRadioDefault3" value="03:00 AM" id="third">
+                                        <label class="form-check-label flight-class-label" for="third">
+                                            03:00 AM
+                                        </label>
+                                    </li>
+                                    <li class="check_flex">
+                                        <input class="form-check-input flight-class" type="radio"
+                                            name="flexRadioDefault3" value="03:30 PM" id="fourth">
+                                        <label class="form-check-label flight-class-label" for="fourth">
+                                            03:30 PM
+                                        </label>
+                                    </li>
+                                </div>
+                                <div class="twoCheck_flex">
+                                    <li class="check_flex">
+                                        <input class="form-check-input flight-class" type="radio"
+                                            name="flexRadioDefault3" value="04:00 AM" id="fifth">
+                                        <label class="form-check-label flight-class-label" for="fifth">
+                                            04:00 AM
+                                        </label>
+                                    </li>
+                                    <li class="check_flex">
+                                        <input class="form-check-input flight-class" type="radio"
+                                            name="flexRadioDefault3" value="04:30 PM" id="sixth">
+                                        <label class="form-check-label flight-class-label" for="sixth">
+                                            04:30 PM
+                                        </label>
+                                    </li>
+                                </div>
+                                <div class="twoCheck_flex">
+                                    <li class="check_flex">
+                                        <input class="form-check-input flight-class" type="radio"
+                                            name="flexRadioDefault3" value="05:00 AM" id="seventh">
+                                        <label class="form-check-label flight-class-label" for="seventh">
+                                            05:00 AM
+                                        </label>
+                                    </li>
+                                    <li class="check_flex">
+                                        <input class="form-check-input flight-class" type="radio"
+                                            name="flexRadioDefault3" value="05:30 PM" id="eight">
+                                        <label class="form-check-label flight-class-label" for="eight">
+                                            05:30 PM
+                                        </label>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-tour-sec">
+            <div class="container">
+                <p class="bestflight_txt">Best Tour</p>
+                <div class="tour-detail my-4">
+                    <div class="detail-hd d-flex">
+                        <div class="col-md-3 px-0">
+                            <div class="tour-img">
+                                <img src="assets/images/tour-view.png" alt="Tour">
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-0">
+                            <div class="tour-content-box">
+                                <h4 class="pkg_hd">A 8 Nights and 9 Singapore-Malaysia Holiday Package</h4>
+                                <div class="all-bookig-detail">
+                                    <div class="rating-e">
+                                        <label class="form-check-label d-flex">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+
+                                            <p class="mb-0 mx-1 mnt-1 styP">5.0</p>
+                                        </label>
+                                        <p class="mb-0 styP text-muted">918 reviews</p>
+                                    </div>
+                                    <div class="detflex">
+                                        <p class="m-0">9 days</p>
+                                        <p class="m-0">Small group</p>
+                                        <p class="m-0">Pickup available</p>
+                                    </div>
+                                    <p class="text-muted booked-txt mb-0">Booked 28 times yesterday</p>
+                                </div>
+                                <div class="check-point">
+                                    <button class="btn btn-local"><img src="assets/images/mdi_airplane.svg" class="me-2"
+                                            alt="Plan">Flights <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/ri_hotel-fill.svg" class="me-2"
+                                            alt="Plan">Hotel <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/mdi_passport.svg" class="me-2"
+                                            alt="Plan">Visa <img class="verify-hd" src="assets/images/mdi_tick.svg" alt="tick">
+                                    </button>
+
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 border-r-price">
+                            <div class="price-content text-center">
+                                <p class="text-muted booked-txt mb-0">Starting From</p>
+                                <div class="pricDev">
+                                    <p class="m-0 linTxt">PKR 205,000</p>
+                                    <p class="m-0 pricetxt">PKR 156,000</p>
+                                    <p class="m-0 fw-bold text-muted booked-txt">( Per Person )</p>
+                                </div>
+                                <div class="tour-view-btn">
+                                    <a class="btn btn-continue" href="tour-detail.html"> View Deal </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tour-detail my-4">
+                    <div class="detail-hd d-flex">
+                        <div class="col-md-3 px-0">
+                            <div class="tour-img">
+                                <img src="assets/images/tour-view.png" alt="Tour">
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-0">
+                            <div class="tour-content-box">
+                                <h4 class="pkg_hd">A 8 Nights and 9 Singapore-Malaysia Holiday Package</h4>
+                                <div class="all-bookig-detail">
+                                    <div class="rating-e">
+                                        <label class="form-check-label d-flex">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+
+                                            <p class="mb-0 mx-1 mnt-1 styP">5.0</p>
+                                        </label>
+                                        <p class="mb-0 styP text-muted">918 reviews</p>
+                                    </div>
+                                    <div class="detflex">
+                                        <p class="m-0">9 days</p>
+                                        <p class="m-0">Small group</p>
+                                        <p class="m-0">Pickup available</p>
+                                    </div>
+                                    <p class="text-muted booked-txt mb-0">Booked 28 times yesterday</p>
+                                </div>
+                                <div class="check-point">
+                                    <button class="btn btn-local"><img src="assets/images/mdi_airplane.svg" class="me-2"
+                                            alt="Plan">Flights <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/ri_hotel-fill.svg" class="me-2"
+                                            alt="Plan">Hotel <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/mdi_passport.svg" class="me-2"
+                                            alt="Plan">Visa <img class="verify-hd" src="assets/images/mdi_tick.svg" alt="tick">
+                                    </button>
+
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 border-r-price">
+                            <div class="price-content text-center">
+                                <p class="text-muted booked-txt mb-0">Starting From</p>
+                                <div class="pricDev">
+                                    <p class="m-0 linTxt">PKR 205,000</p>
+                                    <p class="m-0 pricetxt">PKR 156,000</p>
+                                    <p class="m-0 fw-bold text-muted booked-txt">( Per Person )</p>
+                                </div>
+                                <div class="tour-view-btn">
+                                    <a class="btn btn-continue" href="tour-detail.html"> View Deal </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tour-detail my-4">
+                    <div class="detail-hd d-flex">
+                        <div class="col-md-3 px-0">
+                            <div class="tour-img">
+                                <img src="assets/images/tour-view.png" alt="Tour">
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-0">
+                            <div class="tour-content-box">
+                                <h4 class="pkg_hd">A 8 Nights and 9 Singapore-Malaysia Holiday Package</h4>
+                                <div class="all-bookig-detail">
+                                    <div class="rating-e">
+                                        <label class="form-check-label d-flex">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+
+                                            <p class="mb-0 mx-1 mnt-1 styP">5.0</p>
+                                        </label>
+                                        <p class="mb-0 styP text-muted">918 reviews</p>
+                                    </div>
+                                    <div class="detflex">
+                                        <p class="m-0">9 days</p>
+                                        <p class="m-0">Small group</p>
+                                        <p class="m-0">Pickup available</p>
+                                    </div>
+                                    <p class="text-muted booked-txt mb-0">Booked 28 times yesterday</p>
+                                </div>
+                                <div class="check-point">
+                                    <button class="btn btn-local"><img src="assets/images/mdi_airplane.svg" class="me-2"
+                                            alt="Plan">Flights <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/ri_hotel-fill.svg" class="me-2"
+                                            alt="Plan">Hotel <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/mdi_passport.svg" class="me-2"
+                                            alt="Plan">Visa <img class="verify-hd" src="assets/images/mdi_tick.svg" alt="tick">
+                                    </button>
+
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 border-r-price">
+                            <div class="price-content text-center">
+                                <p class="text-muted booked-txt mb-0">Starting From</p>
+                                <div class="pricDev">
+                                    <p class="m-0 linTxt">PKR 205,000</p>
+                                    <p class="m-0 pricetxt">PKR 156,000</p>
+                                    <p class="m-0 fw-bold text-muted booked-txt">( Per Person )</p>
+                                </div>
+                                <div class="tour-view-btn">
+                                    <a class="btn btn-continue" href="tour-detail.html"> View Deal </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tour-detail my-4">
+                    <div class="detail-hd d-flex">
+                        <div class="col-md-3 px-0">
+                            <div class="tour-img">
+                                <img src="assets/images/tour-view.png" alt="Tour">
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-0">
+                            <div class="tour-content-box">
+                                <h4 class="pkg_hd">A 8 Nights and 9 Singapore-Malaysia Holiday Package</h4>
+                                <div class="all-bookig-detail">
+                                    <div class="rating-e">
+                                        <label class="form-check-label d-flex">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+
+                                            <p class="mb-0 mx-1 mnt-1 styP">5.0</p>
+                                        </label>
+                                        <p class="mb-0 styP text-muted">918 reviews</p>
+                                    </div>
+                                    <div class="detflex">
+                                        <p class="m-0">9 days</p>
+                                        <p class="m-0">Small group</p>
+                                        <p class="m-0">Pickup available</p>
+                                    </div>
+                                    <p class="text-muted booked-txt mb-0">Booked 28 times yesterday</p>
+                                </div>
+                                <div class="check-point">
+                                    <button class="btn btn-local"><img src="assets/images/mdi_airplane.svg" class="me-2"
+                                            alt="Plan">Flights <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/ri_hotel-fill.svg" class="me-2"
+                                            alt="Plan">Hotel <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/mdi_passport.svg" class="me-2"
+                                            alt="Plan">Visa <img class="verify-hd" src="assets/images/mdi_tick.svg" alt="tick">
+                                    </button>
+
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 border-r-price">
+                            <div class="price-content text-center">
+                                <p class="text-muted booked-txt mb-0">Starting From</p>
+                                <div class="pricDev">
+                                    <p class="m-0 linTxt">PKR 205,000</p>
+                                    <p class="m-0 pricetxt">PKR 156,000</p>
+                                    <p class="m-0 fw-bold text-muted booked-txt">( Per Person )</p>
+                                </div>
+                                <div class="tour-view-btn">
+                                    <a class="btn btn-continue" href="tour-detail.html"> View Deal </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tour-detail my-4">
+                    <div class="detail-hd d-flex">
+                        <div class="col-md-3 px-0">
+                            <div class="tour-img">
+                                <img src="assets/images/tour-view.png" alt="Tour">
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-0">
+                            <div class="tour-content-box">
+                                <h4 class="pkg_hd">A 8 Nights and 9 Singapore-Malaysia Holiday Package</h4>
+                                <div class="all-bookig-detail">
+                                    <div class="rating-e">
+                                        <label class="form-check-label d-flex">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+                                            <img src="assets/images/revStar.svg" alt="">
+
+                                            <p class="mb-0 mx-1 mnt-1 styP">5.0</p>
+                                        </label>
+                                        <p class="mb-0 styP text-muted">918 reviews</p>
+                                    </div>
+                                    <div class="detflex">
+                                        <p class="m-0">9 days</p>
+                                        <p class="m-0">Small group</p>
+                                        <p class="m-0">Pickup available</p>
+                                    </div>
+                                    <p class="text-muted booked-txt mb-0">Booked 28 times yesterday</p>
+                                </div>
+                                <div class="check-point">
+                                    <button class="btn btn-local"><img src="assets/images/mdi_airplane.svg" class="me-2"
+                                            alt="Plan">Flights <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/ri_hotel-fill.svg" class="me-2"
+                                            alt="Plan">Hotel <img class="verify-hd" src="assets/images/mdi_tick.svg"
+                                            alt="tick"> </button>
+                                    <button class="btn btn-local"><img src="assets/images/mdi_passport.svg" class="me-2"
+                                            alt="Plan">Visa <img class="verify-hd" src="assets/images/mdi_tick.svg" alt="tick">
+                                    </button>
+
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 border-r-price">
+                            <div class="price-content text-center">
+                                <p class="text-muted booked-txt mb-0">Starting From</p>
+                                <div class="pricDev">
+                                    <p class="m-0 linTxt">PKR 205,000</p>
+                                    <p class="m-0 pricetxt">PKR 156,000</p>
+                                    <p class="m-0 fw-bold text-muted booked-txt">( Per Person )</p>
+                                </div>
+                                <div class="tour-view-btn">
+                                    <a class="btn btn-continue" href="tour-detail.html"> View Deal </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="downlaod-app-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <div class="app-content">
+                            <h1 class="app-heading mb-3">Download This App!</h1>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                                libero
+                                et velit
+                                interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                                conubia nostra, per inceptos himenaeos.</p>
+                            <div class="store-img-box d-flex align-items-center">
+                                <img src="assets/images/play-store.png" alt="play-store" class="me-2">
+                                <img src="assets/images/app-store.png" alt="app-store">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="app-img-box">
+                            <img src="assets/images/app-img.png" class="img-fluid" alt="photo">
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <!-- Popper CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <!-- <script src="assets/js/bootstrap/bootstrap.min.js"></script> -->
+    <!-- Date Pickr JS -->
+    <script src="assets/js/utils/picker.js"></script>
+    <script src="assets/js/utils/picker.date.js"></script>
+    <!-- Carousel JS -->
+    <script src="assets/js/utils/carosel.min.js"></script>
+    <!-- Moment CDN JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- Lite Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <!-- Nice Select jQuery CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
+    <!-- Flat Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Common JS -->
+    <script src="assets/js/common-js.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom/main.js"></script>
+    <script src="assets/js/custom/search.js"></script>
+</body>
+
+</html>

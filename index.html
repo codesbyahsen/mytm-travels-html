@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYTM - Travels</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/utils/carousel.min.css">
+    <!-- Flatpickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Nice Select CDN CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <!-- Lite Pickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+    <!-- Classic CSS -->
+    <link rel="stylesheet" href="assets/css/utils/classic.css">
+    <link rel="stylesheet" href="assets/css/utils/classic.date.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/custom/style1.css" rel="stylesheet">
+    <link href="assets/css/custom/style.css" rel="stylesheet">
+
+</head>
+
+<body class="flights">
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <div class="head-section pt-3" style="background-image: url('assets/images/bg-im.png');background-size: cover;">
+        <div class="container">
+            <div class="stories-container">
+                <div class="story" onclick="openStory(0)">
+                    <img src="assets/images/dubai-one.png" alt="Story 1" class="story-thumbnail">
+                    <label>KSA</label>
+                </div>
+                <div class="story" onclick="openStory(1)">
+                    <img src="assets/images/dubai-one.png" alt="Story 2" class="story-thumbnail">
+                    <label>DUBAI</label>
+                </div>
+                <!-- Add more thumbnails as needed -->
+            </div>
+
+            <div id="storyModal" class="story-modal">
+                <div class="progress-container"></div>
+                <div class="story-content">
+                    <img src="" alt="Story Image" id="storyImage">
+                </div>
+                <span class="close" onclick="closeStory()">&times;</span>
+            </div>
+
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="cardsAni">
+                        <div class="SearchNew2Box AnimationOuter">
+                            <input type="radio" name="slider" id="s1">
+                            <input type="radio" name="slider" id="s2" checked>
+                            <input type="radio" name="slider" id="s3">
+                            <input type="radio" name="slider" id="s4">
+                            <div for="s1" id="slide1" class="HotelBX_new slide" tab="[object Object]">
+                                <div class="SearchTitle_new">
+                                    <div style="display: flex;">
+                                        <div><img alt="umrah" src="assets/images/vector-1.png" width="16" height="16">
+                                        </div>
+                                        <div>
+                                            <div>Umrah</div>
+                                        </div>
+                                    </div>
+                                    <div class="customUmrah">
+                                        <label>Select your city below and we’ll show you Umrah packages that exactly
+                                            meet your requirements</label>
+                                        <label>Select your city below and we’ll show you Umrah packages that exactly
+                                            meet your requirements</label>
+                                    </div>
+                                    <div class="umrahForm">
+                                        <form>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>From</label>
+                                                    <select data-display="Select destination" id="destinationSelect">
+                                                        <option value="" disabled selected>Select Desination</option>
+                                                        <option value="1">New York</option>
+                                                        <option value="2">London</option>
+                                                        <option value="3">Tokyo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>To</label>
+                                                    <select data-display="Select destination" id="destinationSelect">
+                                                        <option value="" disabled selected>Select Arrival</option>
+                                                        <option value="1">New York</option>
+                                                        <option value="2">London</option>
+                                                        <option value="3">Tokyo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>When</label>
+                                                    <input type="text" id="hotelone" placeholder="Select date">
+                                                </div>
+                                                <button style="color: #000;">Search</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div for="s2" id="slide2" class="FlightBX_new slide" tab="[object Object]">
+                                <div class="SearchTitle_new">
+                                    <div style="display: flex;">
+                                        <div><img alt="Flight" src="assets/images/Vector-4.png" width="16" height="16">
+                                        </div>
+                                        <div>
+                                            <div>Flights</div>
+                                        </div>
+                                    </div>
+                                    <div class="custBorder">
+                                        <form class="flight-form flight-form-box-shadow">
+                                            <div class="radio-buttons">
+                                                <div class="radiobtn fliteOne expand">
+                                                    <input type="radio" id="oneway" name="trip" value="oneway"
+                                                        class="custom-radio" checked>
+                                                    <label for="oneway" class="d-flex align-items-center">
+                                                        <div class="stylrad"></div>One Way
+                                                    </label>
+                                                </div>
+                                                <div class="radiobtn fliteTow expand1 ">
+                                                    <input type="radio" id="roundtrip" name="trip" value="round"
+                                                        class="custom-radio">
+                                                    <label for="roundtrip" class="round_trip d-flex align-items-center">
+                                                        <div class="stylrad"></div>Round Trip
+                                                    </label>
+                                                </div>
+                                                <div class="radiobtn fliteTow expand2 ">
+                                                    <input type="radio" id="multicity" name="trip" value="round"
+                                                        class="custom-radio">
+                                                    <label for="multicity" class="round_trip d-flex align-items-center">
+                                                        <div class="stylrad"></div>Multi City
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div class="row m-0 fromTo" style="flex-direction: column;">
+                                                <div class="col-md-12 px-2 mt-2">
+                                                    <label class="flightTag">Flight #1</label>
+                                                    <div class="row">
+                                                        <div class="col-md-12" id="flight_departure_box">
+                                                            <div class="search-box flight-search">
+                                                                <span style="display: block;" class="pt-2">From</span>
+                                                                <div class="departureInput search-input-box">
+                                                                    <input id="departure" value="" type="text"
+                                                                        placeholder="Enter Your Location"
+                                                                        style="background-color: transparent; border: 1px solid transparent;">
+                                                                    <span class="airLocation"
+                                                                        style="display: block;"></span>
+                                                                </div>
+                                                                <div class="drop-downlist-wrapper airlistActive"
+                                                                    style="display: none;">
+                                                                    <div class="full_width search-list-bodyWrap mCustomScrollbar _mCS_1"
+                                                                        data-field="airlistForm">
+                                                                        <div id="mCSB_1" class=""
+                                                                            style="max-height: 288px;" tabindex="0">
+                                                                            <div id="mCSB_1_container"
+                                                                                class="mCSB_container"
+                                                                                style="position:relative; top:0; left:0;"
+                                                                                dir="ltr">
+                                                                                <ul
+                                                                                    class="full_width search-list-dropdown airListDropDown">
+                                                                                    <li class="full_width active"
+                                                                                        data-metro-active="false"
+                                                                                        data-name="Dubai"
+                                                                                        data-value="DXB"
+                                                                                        style="cursor:pointer;">
+                                                                                        <a href="javascript:void(0)"
+                                                                                            class="vAlign air-list-item">
+                                                                                            <div
+                                                                                                class="search-listLeft">
+                                                                                                <h4>
+                                                                                                    <lebel
+                                                                                                        class="airCity">
+                                                                                                        Dubai</lebel>
+                                                                                                    , United Arab
+                                                                                                    Emirates
+                                                                                                </h4><span
+                                                                                                    class="airLocation">
+                                                                                                    Dubai International
+                                                                                                    Airport </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="search-listRight">
+                                                                                                <label
+                                                                                                    class="airCityCode">
+                                                                                                    DXB </label>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="full_width "
+                                                                                        data-metro-active="false"
+                                                                                        data-name="Dubai"
+                                                                                        data-value="DWC"
+                                                                                        style="cursor:pointer;">
+                                                                                        <a href="javascript:void(0)"
+                                                                                            class="vAlign air-list-item">
+                                                                                            <div
+                                                                                                class="search-listLeft">
+                                                                                                <h4>
+                                                                                                    <lebel
+                                                                                                        class="airCity">
+                                                                                                        Dubai</lebel>
+                                                                                                    , United Arab
+                                                                                                    Emirates
+                                                                                                </h4><span
+                                                                                                    class="airLocation">
+                                                                                                    Dubai World Central
+                                                                                                    (Al Maktoum
+                                                                                                    International
+                                                                                                    Airport) </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="search-listRight">
+                                                                                                <label
+                                                                                                    class="airCityCode">
+                                                                                                    DWC </label>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swapBtn">
+                                                            <img src="assets/images/swapIcon.png">
+                                                        </div>
+                                                        <div class="col-md-12 text-center mt-2 "
+                                                            id="flight_destination_box">
+                                                            <div class="search-box flight-search">
+                                                                <span style="display: block;" class="pt-2">To</span>
+                                                                <div class="departureInput1 search-input-box">
+                                                                    <input id="departure" value="" type="text"
+                                                                        placeholder="Enter Your Location"
+                                                                        style="background-color: transparent; border: 1px solid transparent;">
+                                                                    <span class="airLocation"
+                                                                        style="display: block;"></span>
+                                                                </div>
+                                                                <div class="drop-downlist-wrapper1 airlistActive"
+                                                                    style="display: none;">
+                                                                    <div class="full_width search-list-bodyWrap mCustomScrollbar _mCS_1"
+                                                                        data-field="airlistForm">
+                                                                        <div id="mCSB_1"
+                                                                            class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                                                            style="max-height: 288px;" tabindex="0">
+                                                                            <div id="mCSB_1_container"
+                                                                                class="mCSB_container"
+                                                                                style="position:relative; top:0; left:0;"
+                                                                                dir="ltr">
+                                                                                <ul
+                                                                                    class="full_width search-list-dropdown airListDropDown search-list-dropdown1">
+                                                                                    <li class="full_width active"
+                                                                                        data-metro-active="false"
+                                                                                        data-name="Dubai"
+                                                                                        data-value="DXB"
+                                                                                        style="cursor:pointer;">
+                                                                                        <a href="javascript:void(0)"
+                                                                                            class="vAlign air-list-item">
+                                                                                            <div
+                                                                                                class="search-listLeft">
+                                                                                                <h4>
+                                                                                                    <lebel
+                                                                                                        class="airCity">
+                                                                                                        Dubai</lebel>
+                                                                                                    , United Arab
+                                                                                                    Emirates
+                                                                                                </h4><span
+                                                                                                    class="airLocation">
+                                                                                                    Dubai International
+                                                                                                    Airport </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="search-listRight">
+                                                                                                <label
+                                                                                                    class="airCityCode">
+                                                                                                    DXB </label>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="full_width "
+                                                                                        data-metro-active="false"
+                                                                                        data-name="Dubai"
+                                                                                        data-value="DWC"
+                                                                                        style="cursor:pointer;">
+                                                                                        <a href="javascript:void(0)"
+                                                                                            class="vAlign air-list-item">
+                                                                                            <div
+                                                                                                class="search-listLeft">
+                                                                                                <h4>
+                                                                                                    <lebel
+                                                                                                        class="airCity">
+                                                                                                        Dubai</lebel>
+                                                                                                    , United Arab
+                                                                                                    Emirates
+                                                                                                </h4><span
+                                                                                                    class="airLocation">
+                                                                                                    Dubai World Central
+                                                                                                    (Al Maktoum
+                                                                                                    International
+                                                                                                    Airport) </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="search-listRight">
+                                                                                                <label
+                                                                                                    class="airCityCode">
+                                                                                                    DWC </label>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 px-2 mt-2">
+                                                    <div class="row">
+                                                        <div class="col-md-12 mt-2 mt-md-0  for_small_screen_pad">
+                                                            <div class="d-flex flight-date-box">
+                                                                <div class="col-md-6">
+                                                                    <div class="dateDiv date-div">
+                                                                        <p class="inT-Stylee">
+                                                                            Departure
+                                                                        </p>
+                                                                        <div id="departure-input" class="intcus-style">
+                                                                            10 July,2024
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6" style="margin-left: 12px;">
+                                                                    <div
+                                                                        class="dateDiv  txtHide searchPageTxt date-div">
+                                                                        <p class="inT-Stylee">
+                                                                            Return
+                                                                        </p>
+                                                                        <div id="arrival-input" class="intcus-style">
+                                                                            13 july,2024
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row m-0 fromTo flightCity" style="flex-direction: column;">
+                                                <div class="col-md-12 px-2 mt-2">
+                                                    <label class="flightTag">Flight #2</label>
+                                                    <div class="row">
+                                                        <div class="col-md-12" id="flight_departure_box">
+                                                            <div class="search-box flight-search">
+                                                                <span style="display: block;" class="pt-2">From</span>
+                                                                <div class="departureInput search-input-box">
+                                                                    <input id="departure" value="" type="text"
+                                                                        placeholder="Enter Your Location"
+                                                                        style="background-color: transparent; border: 1px solid transparent;">
+                                                                    <span class="airLocation"
+                                                                        style="display: block;">Dubai World Central (Al
+                                                                        Maktoum International Airport) (DWC)</span>
+                                                                </div>
+                                                                <div class="drop-downlist-wrapper airlistActive"
+                                                                    style="display: none;">
+                                                                    <div class="full_width search-list-bodyWrap mCustomScrollbar _mCS_1"
+                                                                        data-field="airlistForm">
+                                                                        <div id="mCSB_1" class=""
+                                                                            style="max-height: 288px;" tabindex="0">
+                                                                            <div id="mCSB_1_container"
+                                                                                class="mCSB_container"
+                                                                                style="position:relative; top:0; left:0;"
+                                                                                dir="ltr">
+                                                                                <ul
+                                                                                    class="full_width search-list-dropdown airListDropDown">
+                                                                                    <li class="full_width active"
+                                                                                        data-metro-active="false"
+                                                                                        data-name="Dubai"
+                                                                                        data-value="DXB"
+                                                                                        style="cursor:pointer;">
+                                                                                        <a href="javascript:void(0)"
+                                                                                            class="vAlign air-list-item">
+                                                                                            <div
+                                                                                                class="search-listLeft">
+                                                                                                <h4>
+                                                                                                    <lebel
+                                                                                                        class="airCity">
+                                                                                                        Dubai</lebel>
+                                                                                                    , United Arab
+                                                                                                    Emirates
+                                                                                                </h4><span
+                                                                                                    class="airLocation">
+                                                                                                    Dubai International
+                                                                                                    Airport </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="search-listRight">
+                                                                                                <label
+                                                                                                    class="airCityCode">
+                                                                                                    DXB </label>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="full_width "
+                                                                                        data-metro-active="false"
+                                                                                        data-name="Dubai"
+                                                                                        data-value="DWC"
+                                                                                        style="cursor:pointer;">
+                                                                                        <a href="javascript:void(0)"
+                                                                                            class="vAlign air-list-item">
+                                                                                            <div
+                                                                                                class="search-listLeft">
+                                                                                                <h4>
+                                                                                                    <lebel
+                                                                                                        class="airCity">
+                                                                                                        Dubai</lebel>
+                                                                                                    , United Arab
+                                                                                                    Emirates
+                                                                                                </h4><span
+                                                                                                    class="airLocation">
+                                                                                                    Dubai World Central
+                                                                                                    (Al Maktoum
+                                                                                                    International
+                                                                                                    Airport) </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="search-listRight">
+                                                                                                <label
+                                                                                                    class="airCityCode">
+                                                                                                    DWC </label>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 text-center mt-2 "
+                                                            id="flight_destination_box">
+                                                            <div class="search-box flight-search">
+                                                                <span style="display: block;" class="pt-2">To</span>
+                                                                <div class="departureInput1 search-input-box">
+                                                                    <input id="departure" value="" type="text"
+                                                                        placeholder="Enter Your Location"
+                                                                        style="background-color: transparent; border: 1px solid transparent;">
+                                                                    <span class="airLocation"
+                                                                        style="display: block;"></span>
+                                                                </div>
+                                                                <div class="drop-downlist-wrapper1 airlistActive"
+                                                                    style="display: none;">
+                                                                    <div class="full_width search-list-bodyWrap mCustomScrollbar _mCS_1"
+                                                                        data-field="airlistForm">
+                                                                        <div id="mCSB_1"
+                                                                            class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                                                            style="max-height: 288px;" tabindex="0">
+                                                                            <div id="mCSB_1_container"
+                                                                                class="mCSB_container"
+                                                                                style="position:relative; top:0; left:0;"
+                                                                                dir="ltr">
+                                                                                <ul
+                                                                                    class="full_width search-list-dropdown airListDropDown search-list-dropdown1">
+                                                                                    <li class="full_width active"
+                                                                                        data-metro-active="false"
+                                                                                        data-name="Dubai"
+                                                                                        data-value="DXB"
+                                                                                        style="cursor:pointer;">
+                                                                                        <a href="javascript:void(0)"
+                                                                                            class="vAlign air-list-item">
+                                                                                            <div
+                                                                                                class="search-listLeft">
+                                                                                                <h4>
+                                                                                                    <lebel
+                                                                                                        class="airCity">
+                                                                                                        Dubai</lebel>
+                                                                                                    , United Arab
+                                                                                                    Emirates
+                                                                                                </h4><span
+                                                                                                    class="airLocation">
+                                                                                                    Dubai International
+                                                                                                    Airport </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="search-listRight">
+                                                                                                <label
+                                                                                                    class="airCityCode">
+                                                                                                    DXB </label>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="full_width "
+                                                                                        data-metro-active="false"
+                                                                                        data-name="Dubai"
+                                                                                        data-value="DWC"
+                                                                                        style="cursor:pointer;">
+                                                                                        <a href="javascript:void(0)"
+                                                                                            class="vAlign air-list-item">
+                                                                                            <div
+                                                                                                class="search-listLeft">
+                                                                                                <h4>
+                                                                                                    <lebel
+                                                                                                        class="airCity">
+                                                                                                        Dubai</lebel>
+                                                                                                    , United Arab
+                                                                                                    Emirates
+                                                                                                </h4><span
+                                                                                                    class="airLocation">
+                                                                                                    Dubai World Central
+                                                                                                    (Al Maktoum
+                                                                                                    International
+                                                                                                    Airport) </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="search-listRight">
+                                                                                                <label
+                                                                                                    class="airCityCode">
+                                                                                                    DWC </label>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 px-2 mt-2">
+                                                    <div class="row">
+                                                        <div class="col-md-12 mt-2 mt-md-0  for_small_screen_pad">
+                                                            <div class="d-flex flight-date-box">
+                                                                <div class="col-md-6">
+                                                                    <div class="dateDiv date-div">
+                                                                        <p class="inT-Stylee">
+                                                                            Departure
+                                                                        </p>
+                                                                        <div id="departure-input" class="intcus-style">
+                                                                            10 July,2024
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6" style="margin-left: 12px;">
+                                                                    <div
+                                                                        class="dateDiv ms-2 txtHide searchPageTxt date-div">
+                                                                        <p class="inT-Stylee">
+                                                                            Return
+                                                                        </p>
+                                                                        <div id="arrival-input" class="intcus-style">
+                                                                            13 july,2024
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row m-0 fromTo" style="flex-direction: column;">
+                                                <div class="col-md-12 px-2 mt-2">
+                                                    <div class="row">
+
+                                                        <div class="col-md-6 mt-2">
+                                                            <div class="adultPass pass-res">
+                                                                <div class="input-group" id="passanger-section">
+                                                                    <input type="text"
+                                                                        placeholder="0 Adult, 0 Child, 0 Infant"
+                                                                        onclick="toggleText(event)"
+                                                                        name="totalManualPassengerdisplay"
+                                                                        class="quantity__input"
+                                                                        value="0 Adult, 0 Child, 0 Infant"
+                                                                        id="totalManualPassengerdisplay" readonly="">
+                                                                    <input type="hidden" name="totalManualPassenger"
+                                                                        id="totalManualPassenger" value="0">
+
+                                                                    <div id="myId" class="passengerCont"
+                                                                        style="display: none;">
+                                                                        <div class="adultRow" style="padding-top:6px;">
+                                                                            <label>Adults <small class="d-block">11+
+                                                                                    yrs</small></label>
+                                                                            <div class="quantity">
+                                                                                <a href="javascript:;"
+                                                                                    class="passCount quantity__minus minus-disabled"
+                                                                                    data-type="madult" data-op="minus">
+                                                                                    <span>-</span>
+                                                                                </a>
+                                                                                <input name="madult" id="madult"
+                                                                                    type="text"
+                                                                                    class="quantity__input pt-0"
+                                                                                    value="0">
+                                                                                <a href="javascript:;"
+                                                                                    class="passCount quantity__plus"
+                                                                                    data-type="madult" data-op="add">
+                                                                                    <span>+</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="adultRow">
+                                                                            <label>Children <small class="d-block">2-11
+                                                                                    yrs</small></label>
+                                                                            <div class="quantity1">
+                                                                                <a href="javascript:;"
+                                                                                    class="passCount quantity__minus minus-disabled"
+                                                                                    data-type="mchildren"
+                                                                                    data-op="minus">
+                                                                                    <span>-</span>
+                                                                                </a>
+                                                                                <input name="mchildren" id="mchildren"
+                                                                                    type="text" class="quantity__input1"
+                                                                                    value="0">
+                                                                                <a href="javascript:;"
+                                                                                    class="passCount quantity__plus"
+                                                                                    data-type="mchildren" data-op="add">
+                                                                                    <span>+</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="adultRow">
+                                                                            <label>Infants <small class="d-block">2
+                                                                                    yrs</small></label>
+                                                                            <div class="quantity1">
+                                                                                <a href="javascript:;"
+                                                                                    class="passCount quantity__minus minus-disabled"
+                                                                                    data-type="minfant" data-op="minus">
+                                                                                    <span>-</span>
+                                                                                </a>
+                                                                                <input name="minfant" id="minfant"
+                                                                                    type="text" class="quantity__input1"
+                                                                                    value="0">
+                                                                                <a href="javascript:;"
+                                                                                    class="passCount quantity__plus"
+                                                                                    data-type="minfant" data-op="add">
+                                                                                    <span>+</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 mt-2 pasClas" style="padding-left: 7px;">
+                                                            <select>
+                                                                <option data-display="Select">Economy</option>
+                                                                <option value="1">Some option</option>
+                                                                <option value="2">Another option</option>
+                                                                <option value="4">Potato</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-md-12 text-center mt-2">
+                                                            <button class="btn btnTheme"> Search
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div for="s3" id="slide3" class="CruiseBX_new slide" tab="[object Object]">
+                                <div class="SearchTitle_new mb20">
+                                    <div style="display: flex;">
+                                        <div><img alt="hotels" src="assets/images/vector-3.png" width="16" height="16">
+                                        </div>
+                                        <div>
+                                            <div>Hotels</div>
+                                        </div>
+                                    </div>
+                                    <div class="customUmrah">
+                                        <label>Select your city below and we’ll show you Umrah packages that exactly
+                                            meet your requirements</label>
+                                        <label>Select your city below and we’ll show you Umrah packages that exactly
+                                            meet your requirements</label>
+                                    </div>
+                                    <div class="umrahForm">
+                                        <form>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>From</label>
+                                                    <select data-display="Select destination" id="destinationSelect">
+                                                        <option value="" disabled selected>Select Desination</option>
+                                                        <option value="1">New York</option>
+                                                        <option value="2">London</option>
+                                                        <option value="3">Tokyo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>To</label>
+                                                    <select data-display="Select destination" id="destinationSelect">
+                                                        <option value="" disabled selected>Select Arrival</option>
+                                                        <option value="1">New York</option>
+                                                        <option value="2">London</option>
+                                                        <option value="3">Tokyo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>When</label>
+                                                    <input type="text" id="hotelone" placeholder="Select date">
+                                                </div>
+                                                <button style="color: #000;">Search</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div for="s4" id="slide4" class="umrah_new slide" tab="[object Object]">
+                                <div class="SearchTitle_new mb20">
+                                    <div style="display: flex;">
+                                        <div><img alt="tours" src="assets/images/vector-2.png" width="16" height="16">
+                                        </div>
+                                        <div>
+                                            <div>Tours</div>
+                                        </div>
+                                    </div>
+                                    <div class="customUmrah">
+                                        <label>Select your city below and we’ll show you Umrah packages that exactly
+                                            meet your requirements</label>
+                                        <label>Select your city below and we’ll show you Umrah packages that exactly
+                                            meet your requirements</label>
+                                    </div>
+                                    <div class="umrahForm">
+                                        <form>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>From</label>
+                                                    <select data-display="Select destination" id="destinationSelect">
+                                                        <option value="" disabled selected>Select Desination</option>
+                                                        <option value="1">New York</option>
+                                                        <option value="2">London</option>
+                                                        <option value="3">Tokyo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>To</label>
+                                                    <select data-display="Select destination" id="destinationSelect">
+                                                        <option value="" disabled selected>Select Arrival</option>
+                                                        <option value="1">New York</option>
+                                                        <option value="2">London</option>
+                                                        <option value="3">Tokyo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mt-2 pasClas" style="padding-left: 7px;">
+                                                <div class="inputFeild">
+                                                    <label>When</label>
+                                                    <input type="text" id="hotelone" placeholder="Select date">
+                                                </div>
+                                                <button style="color: #000;">Search</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="umrahPack flightPack">
+                        <h1>Get Flights </h1>
+                        <p>Select your city below and we’ll show you Umrah packages that exactly meet your requirements
+                        </p>
+                        <div class="umrahItems">
+                            <div class="expertTest">
+                                <ul>
+                                    <li>
+                                        <span>6,000</span>
+                                        <span>Happy Customer</span>
+                                    </li>
+                                    <li>
+                                        <span>1,200</span>
+                                        <span>Packages Sold</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="testiDetail">
+                                <label>M. Ahmad</label>
+                                <p>Lorem ipsum dolor sit amet consur. Fermentum at dolor commodo am faucibus mauris. Vel
+                                    nec morbi me tempus ipsum vitae duis id sed amet.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="umrahPack hotelPack">
+                        <h1>Get Hotel packages for your own city</h1>
+                        <p>Select your city below and we’ll show you Umrah packages that exactly meet your requirements
+                        </p>
+                        <div class="umrahItems">
+                            <div class="expertTest">
+                                <ul>
+                                    <li>
+                                        <span>8,000</span>
+                                        <span>Happy Customer</span>
+                                    </li>
+                                    <li>
+                                        <span>1,200</span>
+                                        <span>Packages Sold</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="testiDetail">
+                                <label>M. Ahmad</label>
+                                <p>Lorem ipsum dolor sit amet consur. Fermentum at dolor commodo am faucibus mauris. Vel
+                                    nec morbi me tempus ipsum vitae duis id sed amet.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="umrahPack tourPack">
+                        <h1>Get Tour packages for your own city</h1>
+                        <p>Select your city below and we’ll show you Umrah packages that exactly meet your requirements
+                        </p>
+                        <div class="umrahItems">
+                            <div class="expertTest">
+                                <ul>
+                                    <li>
+                                        <span>5,000</span>
+                                        <span>Happy Customer</span>
+                                    </li>
+                                    <li>
+                                        <span>1,200</span>
+                                        <span>Packages Sold</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="testiDetail">
+                                <label>M. Ahmad</label>
+                                <p>Lorem ipsum dolor sit amet consur. Fermentum at dolor commodo am faucibus mauris. Vel
+                                    nec morbi me tempus ipsum vitae duis id sed amet.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="umrahPack umraahPack">
+                        <h1>Get Umrah packages for your own city</h1>
+                        <p>Select your city below and we’ll show you Umrah packages that exactly meet your requirements
+                        </p>
+                        <div class="umrahItems">
+                            <div class="expertTest">
+                                <ul>
+                                    <li>
+                                        <span>8,000</span>
+                                        <span>Happy Customer</span>
+                                    </li>
+                                    <li>
+                                        <span>1,200</span>
+                                        <span>Packages Sold</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="testiDetail">
+                                <label>M. Ahmad</label>
+                                <p>Lorem ipsum dolor sit amet consur. Fermentum at dolor commodo am faucibus mauris. Vel
+                                    nec morbi me tempus ipsum vitae duis id sed amet.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Carousel Sections -->
+    <section class="carousel_section pt-5 pb-5">
+        <div class="container">
+            <div class="section_header">
+                <p class="section_header_txt">Best Flight Deals</p>
+            </div>
+            <div id="owl-demo-2" class="owl-carousel owl-theme">
+
+            </div>
+        </div>
+    </section>
+    <section class="scureJun">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="secureTravel">
+                        <h3>Secure Your Journey with <span>Travel Insurance</span></h3>
+                        <p>Traveling is one of life’s greatest joys, but unexpected events can turn your dream trip into
+                            a nightmare.</p>
+                        <p>Our travel insurance is here to help. With a range of tailored coverage options, our policies
+                            safeguard your journeys and ensure peace of mind from the moment you book until you return
+                            home.</p>
+                        <a class="secureBtn">Book Travel Insurance</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="travelsImg">
+                        <img src="assets/images/frameImg.png">
+                        <ul>
+                            <li>Get reimbursed for non-refundable travel costs.</li>
+                            <li>Access to medical care, no matter where you are.</li>
+                            <li>Coverage for additional expenses due to delays.</li>
+                            <li>Compensation for lost, stolen, or delayed luggage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="destin">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="row style_row">
+                        <div class="col-lg-6 col-md-12 item">
+                            <div class="dest_image">
+                                <img src="assets/images/desImage1.jpg" alt="" class="style_img hover_img">
+                                <div class="overlay">
+                                    <p class="overlay_txt m-0 item">Istanbul</p>
+                                    <p class="overlay_price item">From <span class="price_detail">PKR 40000</span></p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-md-12 item">
+                            <div class="dest_image">
+                                <img src="assets/images/desImage2.jpg" alt="" class="style_img hover_img">
+                                <div class="overlay">
+                                    <p class="overlay_txt m-0 item">Dubai</p>
+                                    <p class="overlay_price item">From <span class="price_detail">PKR 400000</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 item">
+                            <div class="dest_image">
+                                <img src="assets/images/desImage3.jpg" alt="" class="style_lg_img hover_img">
+                                <div class="overlay">
+                                    <p class="overlay_txt m-0 item">Maldives</p>
+                                    <p class="overlay_price item">From <span class="price_detail">PKR 500000</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 item">
+                    <div class="row style_row">
+                        <div class="col-md-12">
+                            <div class="dest_image">
+                                <img src="assets/images/desImage4.jpg" alt="" class="style_sm_img hover_img">
+                                <div class="overlay">
+                                    <p class="overlay_txt m-0 item">London</p>
+                                    <p class="overlay_price item">From <span class="price_detail">PKR 800000</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 item">
+                            <div class="dest_image">
+                                <img src="assets/images/desImage5.jpg" alt="" class="style_sm_img hover_img">
+                                <div class="overlay">
+                                    <p class="overlay_txt m-0 item">New York</p>
+                                    <p class="overlay_price item">From <span class="price_detail">PKR 950000</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 item">
+                    <div class="row style_row">
+                        <div class="col-md-12">
+                            <div class="dest_image">
+                                <img src="assets/images/desImage6.jpg" alt="" class="style_md_img hover_img">
+                                <div class="overlay">
+                                    <p class="overlay_txt m-0 item">Paris</p>
+                                    <p class="overlay_price item">From <span class="price_detail">PKR 750000</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="btn_style2">
+                                <a type="button" href="" class="btn btn_view_more item">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <!-- Popper CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Date Pickr JS -->
+    <script src="assets/js/utils/picker.js"></script>
+    <script src="assets/js/utils/picker.date.js"></script>
+    <!-- Carousel JS -->
+    <script src="assets/js/utils/carosel.min.js"></script>
+    <!-- Moment CDN JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- Lite Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <!-- Nice Select jQuery CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
+    <!-- Flat Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Common JS -->
+    <script src="assets/js/common-js.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom/main.js"></script>
+    <script src="assets/js/custom/search.js"></script>
+</body>
+
+</html>

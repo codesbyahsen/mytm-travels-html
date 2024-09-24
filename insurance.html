@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYTM - Travels</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/utils/carousel.min.css">
+    <!-- Flatpickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Nice Select CDN CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <!-- Lite Pickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+    <!-- Classic CSS -->
+    <link rel="stylesheet" href="assets/css/utils/classic.css">
+    <link rel="stylesheet" href="assets/css/utils/classic.date.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/custom/style1.css" rel="stylesheet">
+    <link href="assets/css/custom/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <section class="banner-ins">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item bc"><a href="#">Home</a></li>
+
+                    <li class="breadcrumb-item active" aria-current="page">Insurance Details</li>
+                </ol>
+            </nav>
+            <div class="insurance-search-wrapper">
+                <div class="family-btn">
+                    <ul class="fam-list">
+                        <li><a href="#" class="fam-item active">Individual</a></li>
+                        <li><a href="#" class="fam-item">Family</a></li>
+                    </ul>
+                </div>
+                <form class="manage-ins-form pt-2" action="">
+                    <div class="form-items d-flex">
+                        <div class="column-cut insu-pas me-2">
+                            <div class="ins-search-input">
+                                <input type="text" placeholder="" name="">
+                            </div>
+                        </div>
+                        <div class="column-cut me-2">
+                            <div class="ins-search-sel">
+
+                                <select data-display="Select destination" id="destinationSelect">
+                                    <option value="" disabled selected>Select Arrival</option>
+                                    <option value="1">New York</option>
+                                    <option value="2">London</option>
+                                    <option value="3">Tokyo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="column-cut me-2">
+                            <div class="inputDate">
+
+                                <input type="text" id="hotelone" placeholder="Select date">
+                            </div>
+
+                        </div>
+                        <div class="column-cut me-2">
+                            <div class="inputDate">
+
+                                <input type="text" id="hotelone" placeholder="Select date">
+                            </div>
+
+                        </div>
+                        <div class="column-cut insu-pas me-2">
+                            <div class="ins-search-input">
+                                <input type="text" placeholder="" name="">
+                            </div>
+                        </div>
+                        <div class="column-cut me-3">
+                            <div class="inputDate">
+
+                                <input type="text" id="hotelone" placeholder="Select date">
+                            </div>
+
+                        </div>
+
+                        <div class="column-cut">
+                            <button class="btn btn-continue"> Search </button>
+
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="travel-Search pt-3">
+        <div class="container">
+            <h4 class="my-3 top-heading">Best Insurance</h4>
+            <div class="row border my-4">
+                <div class="col-md-9 p-0">
+                    <div class="row">
+                        <div class="col-md-3 pe-0">
+                            <div class="travLogoBg">
+                                <img src="assets/images/travImage.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="travFlex bgwhite">
+                                <p class="dmdTxt">Diamond</p>
+                                <div class="cnTxt">
+                                    <h5 class="m-0">Schengen</h5>
+                                    <p class="m-0 text-muted">Covid Covered</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="topBtmtxt border-bottom liteGrey">
+                                <p class="m-0">Medical Expenses & H...</p>
+                                <h6 class="m-0">50,000 (Excess $50)</h6>
+                            </div>
+                            <div class="topBtmtxt bgwhite">
+                                <p class="m-0">Loss of Passport</p>
+                                <h6 class="m-0">500</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="topBtmtxt border-bottom bgwhite">
+                                <p class="m-0">Emergency Dental Care</p>
+                                <h6 class="m-0">600</h6>
+                            </div>
+                            <div class="topBtmtxt liteGrey">
+                                <p class="m-0">Loss of Passport</p>
+                                <h6 class="m-0">500</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 pe-0 text-center ">
+
+                    <div class="rightBtmtxt bgwhite h-100">
+                        <div>
+                            <p class="m-0 text-decoration-line-through">PKR 25,000</p>
+                            <h6 class="m-0">PKR 18,000</h6>
+                            <p class="m-0">( Premium )</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-continue"> Buy Deal </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 p-0">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button bgLitegray collapsed border-top " type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    View more detail
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion
+                                    body.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-4">
+                <div class="col-md-9 p-0">
+                    <div class="row">
+                        <div class="col-md-3 pe-0">
+                            <div class="travLogoBg">
+                                <img src="assets/images/travImage.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="travFlex bgwhite">
+                                <p class="dmdTxt">Diamond</p>
+                                <div class="cnTxt">
+                                    <h5 class="m-0">Schengen</h5>
+                                    <p class="m-0 text-muted">Covid Covered</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="topBtmtxt border-bottom liteGrey">
+                                <p class="m-0">Medical Expenses & H...</p>
+                                <h6 class="m-0">50,000 (Excess $50)</h6>
+                            </div>
+                            <div class="topBtmtxt bgwhite">
+                                <p class="m-0">Loss of Passport</p>
+                                <h6 class="m-0">500</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="topBtmtxt border-bottom bgwhite">
+                                <p class="m-0">Emergency Dental Care</p>
+                                <h6 class="m-0">600</h6>
+                            </div>
+                            <div class="topBtmtxt liteGrey">
+                                <p class="m-0">Loss of Passport</p>
+                                <h6 class="m-0">500</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 pe-0 text-center ">
+
+                    <div class="rightBtmtxt bgwhite h-100">
+                        <div>
+                            <p class="m-0 text-decoration-line-through">PKR 25,000</p>
+                            <h6 class="m-0">PKR 18,000</h6>
+                            <p class="m-0">( Premium )</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-continue"> Buy Deal </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 p-0">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button bgLitegray collapsed border-top " type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    View more detail
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion
+                                    body.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-4">
+                <div class="col-md-9 p-0">
+                    <div class="row">
+                        <div class="col-md-3 pe-0">
+                            <div class="travLogoBg">
+                                <img src="assets/images/travImage.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="travFlex bgwhite">
+                                <p class="dmdTxt">Diamond</p>
+                                <div class="cnTxt">
+                                    <h5 class="m-0">Schengen</h5>
+                                    <p class="m-0 text-muted">Covid Covered</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="topBtmtxt border-bottom liteGrey">
+                                <p class="m-0">Medical Expenses & H...</p>
+                                <h6 class="m-0">50,000 (Excess $50)</h6>
+                            </div>
+                            <div class="topBtmtxt bgwhite">
+                                <p class="m-0">Loss of Passport</p>
+                                <h6 class="m-0">500</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="topBtmtxt border-bottom bgwhite">
+                                <p class="m-0">Emergency Dental Care</p>
+                                <h6 class="m-0">600</h6>
+                            </div>
+                            <div class="topBtmtxt liteGrey">
+                                <p class="m-0">Loss of Passport</p>
+                                <h6 class="m-0">500</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 pe-0 text-center ">
+
+                    <div class="rightBtmtxt bgwhite h-100">
+                        <div>
+                            <p class="m-0 text-decoration-line-through">PKR 25,000</p>
+                            <h6 class="m-0">PKR 18,000</h6>
+                            <p class="m-0">( Premium )</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-continue"> Buy Deal </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 p-0">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button bgLitegray collapsed border-top " type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    View more detail
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion
+                                    body.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-4">
+                <div class="col-md-9 p-0">
+                    <div class="row">
+                        <div class="col-md-3 pe-0">
+                            <div class="travLogoBg">
+                                <img src="assets/images/travImage.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="travFlex bgwhite">
+                                <p class="dmdTxt">Diamond</p>
+                                <div class="cnTxt">
+                                    <h5 class="m-0">Schengen</h5>
+                                    <p class="m-0 text-muted">Covid Covered</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="topBtmtxt border-bottom liteGrey">
+                                <p class="m-0">Medical Expenses & H...</p>
+                                <h6 class="m-0">50,000 (Excess $50)</h6>
+                            </div>
+                            <div class="topBtmtxt bgwhite">
+                                <p class="m-0">Loss of Passport</p>
+                                <h6 class="m-0">500</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-0 border-end">
+
+                            <div class="topBtmtxt border-bottom bgwhite">
+                                <p class="m-0">Emergency Dental Care</p>
+                                <h6 class="m-0">600</h6>
+                            </div>
+                            <div class="topBtmtxt liteGrey">
+                                <p class="m-0">Loss of Passport</p>
+                                <h6 class="m-0">500</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 pe-0 text-center ">
+
+                    <div class="rightBtmtxt bgwhite h-100">
+                        <div>
+                            <p class="m-0 text-decoration-line-through">PKR 25,000</p>
+                            <h6 class="m-0">PKR 18,000</h6>
+                            <p class="m-0">( Premium )</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-continue"> Buy Deal </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 p-0">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button bgLitegray collapsed border-top " type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    View more detail
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion
+                                    body.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="downlaod-app-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="app-content">
+                        <h1 class="app-heading mb-3">Download This App!</h1>
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero
+                            et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia nostra, per inceptos himenaeos.</p>
+                        <div class="store-img-box d-flex align-items-center">
+                            <img src="assets/images/play-store.png" alt="play-store" class="me-2">
+                            <img src="assets/images/app-store.png" alt="app-store">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="app-img-box">
+                        <img src="assets/images/app-img.png" class="img-fluid" alt="photo">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <!-- Popper CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Date Pickr JS -->
+    <script src="assets/js/utils/picker.js"></script>
+    <script src="assets/js/utils/picker.date.js"></script>
+    <!-- Carousel JS -->
+    <script src="assets/js/utils/carosel.min.js"></script>
+    <!-- Moment CDN JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- Lite Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <!-- Nice Select jQuery CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
+    <!-- Flat Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Common JS -->
+    <script src="assets/js/common-js.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom/main.js"></script>
+    <script src="assets/js/custom/search.js"></script>
+</body>
+
+</html>

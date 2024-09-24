@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYTM - Travels</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/utils/carousel.min.css">
+    <!-- Flatpickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Nice Select CDN CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <!-- Lite Pickr CDN CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+    <!-- Classic CSS -->
+    <link rel="stylesheet" href="assets/css/utils/classic.css">
+    <link rel="stylesheet" href="assets/css/utils/classic.date.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/custom/style1.css" rel="stylesheet">
+    <link href="assets/css/custom/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <section class="banner-flg">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item bc"><a href="#">Home</a></li>
+
+                    <li class="breadcrumb-item active" aria-current="page">Flights</li>
+                </ol>
+            </nav>
+            <div class="insurance-search-wrapper">
+
+                <form class="manage-ins-form pt-2" action="">
+                    <div class="form-items tour-search row">
+                        <div class="col-md-6 touClas" style="padding-left: 7px;">
+                            <div class="row">
+                                <div class="col-md-6 pe-1" id="flight_departure_box">
+                                    <div class="search-box flight-search flight-bg">
+                                        <span style="display: block;" class="pt-2">From</span>
+                                        <div class="departureInput search-input-box">
+                                            <input id="departure" value="" type="text" placeholder="Enter Your Location"
+                                                style="background-color: transparent; border: 1px solid transparent;">
+                                            <span class="airLocation" style="display: block;"></span>
+                                        </div>
+                                        <div class="drop-downlist-wrapper airlistActive" style="display: none;">
+                                            <div class="full_width search-list-bodyWrap mCustomScrollbar _mCS_1"
+                                                data-field="airlistForm">
+                                                <div id="mCSB_1" class="" style="max-height: 288px;" tabindex="0">
+                                                    <div id="mCSB_1_container" class="mCSB_container"
+                                                        style="position:relative; top:0; left:0;" dir="ltr">
+                                                        <ul class="full_width search-list-dropdown airListDropDown">
+                                                            <li class="full_width active" data-metro-active="false"
+                                                                data-name="Dubai" data-value="DXB"
+                                                                style="cursor:pointer;">
+                                                                <a href="javascript:void(0)"
+                                                                    class="vAlign air-list-item">
+                                                                    <div class="search-listLeft">
+                                                                        <h4>
+                                                                            <lebel class="airCity">
+                                                                                Dubai</lebel>
+                                                                            , United Arab
+                                                                            Emirates
+                                                                        </h4><span class="airLocation">
+                                                                            Dubai International
+                                                                            Airport </span>
+                                                                    </div>
+                                                                    <div class="search-listRight">
+                                                                        <label class="airCityCode">
+                                                                            DXB </label>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="full_width " data-metro-active="false"
+                                                                data-name="Dubai" data-value="DWC"
+                                                                style="cursor:pointer;">
+                                                                <a href="javascript:void(0)"
+                                                                    class="vAlign air-list-item">
+                                                                    <div class="search-listLeft">
+                                                                        <h4>
+                                                                            <lebel class="airCity">
+                                                                                Dubai</lebel>
+                                                                            , United Arab
+                                                                            Emirates
+                                                                        </h4><span class="airLocation">
+                                                                            Dubai World Central
+                                                                            (Al Maktoum
+                                                                            International
+                                                                            Airport) </span>
+                                                                    </div>
+                                                                    <div class="search-listRight">
+                                                                        <label class="airCityCode">
+                                                                            DWC </label>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swapBtnflight">
+                                    <img src="assets/images/swap-y.svg">
+                                </div>
+                                <div class="col-md-6 ps-0 ps-1 text-center " id="flight_destination_box">
+                                    <div class="search-box flight-search flight-bg">
+                                        <span style="display: block;" class="pt-2">To</span>
+                                        <div class="departureInput1 search-input-box">
+                                            <input id="departure" value="" type="text" placeholder="Enter Your Location"
+                                                style="background-color: transparent; border: 1px solid transparent;">
+                                            <span class="airLocation" style="display: block;"></span>
+                                        </div>
+                                        <div class="drop-downlist-wrapper1 airlistActive" style="display: none;">
+                                            <div class="full_width search-list-bodyWrap mCustomScrollbar _mCS_1"
+                                                data-field="airlistForm">
+                                                <div id="mCSB_1"
+                                                    class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                                    style="max-height: 288px;" tabindex="0">
+                                                    <div id="mCSB_1_container" class="mCSB_container"
+                                                        style="position:relative; top:0; left:0;" dir="ltr">
+                                                        <ul
+                                                            class="full_width search-list-dropdown airListDropDown search-list-dropdown1">
+                                                            <li class="full_width active" data-metro-active="false"
+                                                                data-name="Dubai" data-value="DXB"
+                                                                style="cursor:pointer;">
+                                                                <a href="javascript:void(0)"
+                                                                    class="vAlign air-list-item">
+                                                                    <div class="search-listLeft">
+                                                                        <h4>
+                                                                            <lebel class="airCity">
+                                                                                Dubai</lebel>
+                                                                            , United Arab
+                                                                            Emirates
+                                                                        </h4><span class="airLocation">
+                                                                            Dubai International
+                                                                            Airport </span>
+                                                                    </div>
+                                                                    <div class="search-listRight">
+                                                                        <label class="airCityCode">
+                                                                            DXB </label>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="full_width " data-metro-active="false"
+                                                                data-name="Dubai" data-value="DWC"
+                                                                style="cursor:pointer;">
+                                                                <a href="javascript:void(0)"
+                                                                    class="vAlign air-list-item">
+                                                                    <div class="search-listLeft">
+                                                                        <h4>
+                                                                            <lebel class="airCity">
+                                                                                Dubai</lebel>
+                                                                            , United Arab
+                                                                            Emirates
+                                                                        </h4><span class="airLocation">
+                                                                            Dubai World Central
+                                                                            (Al Maktoum
+                                                                            International
+                                                                            Airport) </span>
+                                                                    </div>
+                                                                    <div class="search-listRight">
+                                                                        <label class="airCityCode">
+                                                                            DWC </label>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 date-flg" style="padding-left: 7px;">
+                            <div class="d-flex flight-date-box">
+                                <div class="col-md-6">
+                                    <div class="dateDiv date-div">
+                                        <p class="inT-Stylee">
+                                            Departure
+                                        </p>
+                                        <div id="departure-input" class="intcus-style">
+                                            10 July,2024
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pe-0" style="margin-left: 12px;">
+                                    <div class="dateDiv  txtHide searchPageTxt date-div">
+                                        <p class="inT-Stylee">
+                                            Return
+                                        </p>
+                                        <div id="arrival-input" class="intcus-style">
+                                            13 july,2024
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 px-0">
+                            <div class="column-cut">
+                                <button class="btn btn-continue"> Search </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="filter_section">
+        <div class="container">
+            <div class="filter_flex py-4">
+                <div class="filter_img">
+                    <img src="assets/images/filter_icon.svg" alt="">
+                    <p class="filter_txt m-0">Filters</p>
+                </div>
+
+
+                <div class="rang_dropdown">
+                    <div class="dropdown drop_arrow">
+                        <button class="btn btn-secondary dropdown-toggle btn_range_drp" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Price Range
+                        </button>
+                        <ul class="dropdown-menu range_drop_down">
+                            <div class="price-input">
+                                <div class="field">
+                                    <span>Rs.</span>
+                                    <input type="number" class="input-min price_style" value="25200" readonly>
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="field">
+                                    <span>Rs.</span>
+                                    <input type="number" class="input-max price_style" value="75000" readonly>
+                                </div>
+                            </div>
+                            <div class="slider">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="range-input">
+                                <input type="range" class="range-min" min="0" max="100000" value="25200" step="100"
+                                    readonly>
+                                <input type="range" class="range-max" min="0" max="100000" value="75000" step="100"
+                                    readonly>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about_stops">
+                    <div class="dropdown drop_arrow">
+                        <button class="btn btn-secondary dropdown-toggle btn_range_drp" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Stops
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="check_flex">
+                                <input class="form-check-input flight-class" type="radio" name="flexRadioDefault1"
+                                    value="NonStop" id="NonStop" checked>
+                                <label class="form-check-label flight-class-label" for="NonStop">
+                                    Nonestop
+                                </label>
+                            </li>
+                            <li class="check_flex">
+                                <input class="form-check-input flight-class" type="radio" name="flexRadioDefault1"
+                                    value="1 stop" id="oneStop">
+                                <label class="form-check-label flight-class-label" for="oneStop">
+                                    1 Stop
+                                </label>
+                            </li>
+                            <li class="check_flex">
+                                <input class="form-check-input flight-class" type="radio" name="flexRadioDefault1"
+                                    value="2 Stop" id="twoStop">
+                                <label class="form-check-label flight-class-label" for="twoStop">
+                                    2 Stop
+                                </label>
+                            </li>
+                            <li class="check_flex">
+                                <input class="form-check-input flight-class" type="radio" name="flexRadioDefault1"
+                                    value="3 Stop" id="threeStop">
+                                <label class="form-check-label flight-class-label" for="threeStop">
+                                    First Class
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about_airlines">
+                    <div class="dropdown drop_arrow">
+                        <button class="btn btn-secondary dropdown-toggle btn_range_drp" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Airlines
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="check_flex">
+                                <input class="form-check-input flight-class" type="radio" name="flexRadioDefault2"
+                                    value="PIA" id="PIA" checked>
+                                <label class="form-check-label flight-class-label" for="PIA">
+                                    PIA
+                                </label>
+                            </li>
+                            <li class="check_flex">
+                                <input class="form-check-input flight-class" type="radio" name="flexRadioDefault2"
+                                    value="Qatar Airways" id="qatarAirways">
+                                <label class="form-check-label flight-class-label" for="qatarAirways">
+                                    Qatar Airways
+                                </label>
+                            </li>
+                            <li class="check_flex">
+                                <input class="form-check-input flight-class" type="radio" name="flexRadioDefault2"
+                                    value="Emirates" id="emirate">
+                                <label class="form-check-label flight-class-label" for="emirate">
+                                    Emirates
+                                </label>
+                            </li>
+                            <li class="check_flex">
+                                <input class="form-check-input flight-class" type="radio" name="flexRadioDefault2"
+                                    value="Air Sial" id="airSial">
+                                <label class="form-check-label flight-class-label" for="airSial">
+                                    Air Sial
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="about_depTime">
+                    <div class="dropdown drop_arrow">
+                        <button class="btn btn-secondary dropdown-toggle btn_range_drp" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Depart Times
+                        </button>
+                        <ul class="dropdown-menu">
+                            <div class="twoCheck_flex">
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault3"
+                                        value="02:00 AM" id="first" checked>
+                                    <label class="form-check-label flight-class-label" for="first">
+                                        02:00 AM
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault3"
+                                        value="02:30 PM" id="second">
+                                    <label class="form-check-label flight-class-label" for="second">
+                                        02:30 PM
+                                    </label>
+                                </li>
+                            </div>
+                            <div class="twoCheck_flex">
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault3"
+                                        value="03:00 AM" id="third">
+                                    <label class="form-check-label flight-class-label" for="third">
+                                        03:00 AM
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault3"
+                                        value="03:30 PM" id="fourth">
+                                    <label class="form-check-label flight-class-label" for="fourth">
+                                        03:30 PM
+                                    </label>
+                                </li>
+                            </div>
+                            <div class="twoCheck_flex">
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault3"
+                                        value="04:00 AM" id="fifth">
+                                    <label class="form-check-label flight-class-label" for="fifth">
+                                        04:00 AM
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault3"
+                                        value="04:30 PM" id="sixth">
+                                    <label class="form-check-label flight-class-label" for="sixth">
+                                        04:30 PM
+                                    </label>
+                                </li>
+                            </div>
+                            <div class="twoCheck_flex">
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault3"
+                                        value="05:00 AM" id="seventh">
+                                    <label class="form-check-label flight-class-label" for="seventh">
+                                        05:00 AM
+                                    </label>
+                                </li>
+                                <li class="check_flex">
+                                    <input class="form-check-input flight-class" type="radio" name="flexRadioDefault3"
+                                        value="05:30 PM" id="eight">
+                                    <label class="form-check-label flight-class-label" for="eight">
+                                        05:30 PM
+                                    </label>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bestFlight">
+        <div class="container">
+            <p class="bestflight_txt">Best Flights</p>
+            <div class="sear_detail">
+                <div class="searhd_flex">
+                    <div class="img_txt_flex">
+                        <img src="assets/images/qatarImg.svg" alt="" class="plane_imgStyle">
+                        <div class="flightTime_detail pt-3">
+                            <p class="timeDetail mb-2"><span>09:25 AM - 06:20AM </span></p>
+                            <p class="planeName"><span>Qatar Airways, British Airways</span></p>
+                        </div>
+                    </div>
+                    <div class="timePlace_detail">
+                        <p class="arrivalTime mb-3"> <span>25 hr 20 min</span></p>
+                        <p class="placeArrival"><span>LHE - JFK</span></p>
+                    </div>
+                    <div class="stopsDetail">
+                        <p class="stopTxt"><span>1 Stop</span><img src="assets/images/stopdetail.svg" alt=""
+                                class="stopDetail_img"></p>
+                        <p class="stopArrive_detail"><span>14 hr 10 min DOH</span></p>
+                    </div>
+                    <div class="priceDetailFlight">
+                        <div class="priceDetailflex">
+                            <p class="priceDetaiTxt mb-2"><span>PKR. 500733</span></p>
+                            <p class="RoundTripTxt">Round Trip</p>
+
+                        </div>
+                        <div class="accordion accordion-flush" id="moreFlightDetail">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="buttonToExpand">
+                                    <button class="accordion-button collapsed px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#ShowDetail" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                    </button>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="ShowDetail" class="accordion-collapse collapse " aria-labelledby="buttonToExpand"
+                data-bs-parent="#moreFlightDetail">
+                <div class="accordion-body tabStyle">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active detailTxt" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#fligt_Details" type="button" role="tab" aria-controls="home"
+                                aria-selected="true">Flight Detail</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link detailTxt" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#baggage" type="button" role="tab" aria-controls="profile"
+                                aria-selected="false">Baggage</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link detailTxt" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#fareDetail" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Fare</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="fligt_Details" role="tabpanel"
+                            aria-labelledby="home-tab">
+                            <div class="flightDetailFlex">
+                                <div class="timeAirport">
+                                    <img src="assets/images/circleImg.png" alt="" class="circleImg">
+                                    <p class="timeAirporttxt m-0"><span class="timeTxt">09:25 AM</span> - <span
+                                            class="airportTxt">Allama Iqbal International Airport (DOH)</span></p>
+                                </div>
+                                <div class="timeTravel">
+                                    <p class="timeTravelTxt">Time Travel: <span>4hr</span></p>
+                                    <p class="flightEconomyDetail m-0"><span>Qatar Airways</span> - <span>Economy</span>
+                                        -
+                                        <span>Airbus A350</span> - <span>QR 629</span>
+                                    </p>
+                                </div>
+                                <div class="timeAirport">
+                                    <img src="assets/images/circleImg.png" alt="" class="circleImg">
+                                    <p class="timeAirporttxt m-0"><span class="timeTxt">01:25 PM</span> - <span
+                                            class="airportTxt">Hammad International Airport (DOH)</span></p>
+                                </div>
+                            </div>
+                            <div class="requiretime">
+                                <p class="requiretimeTxt m-0"><span>14 hr 10 min layover Doha (DOH)</span></p>
+                            </div>
+                            <div class="flightDetailFlex mt-0 border-bottom-0">
+                                <div class="timeAirport">
+                                    <img src="assets/images/circleImg.png" alt="" class="circleImg">
+                                    <p class="timeAirporttxt m-0"><span class="timeTxt">01:35 pM</span> - <span
+                                            class="airportTxt">Hammad International Airport (DOH)</span></p>
+                                </div>
+                                <div class="timeTravel">
+                                    <p class="timeTravelTxt">Time Travel: <span>7hr 10 min</span> -
+                                        <span>Overnight</span>
+                                    </p>
+                                    <p class="flightEconomyDetail m-0"><span>Qatar Airways</span> - <span>Economy</span>
+                                        -
+                                        <span>Airbus A350</span> - <span>QR 629</span>
+                                    </p>
+                                </div>
+                                <div class="timeAirport">
+                                    <img src="assets/images/circleImg.png" alt="" class="circleImg">
+                                    <p class="timeAirporttxt m-0"><span class="timeTxt">06:25 PM</span> - <span
+                                            class="airportTxt">John F.kennedy International Airport (NY)</span></p>
+                                </div>
+                            </div>
+                            <div class="bookNowBtn text-end">
+                                <button type="button" class="btn btn-bookNow">Book Now</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="baggage" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table mt-2 border-top">
+                                            <tbody>
+                                                <tr class="space_height">
+                                                    <th><img src="assets/images/table_im1.svg" alt=""><span
+                                                            class="table_txt">Adult</span></th>
+                                                    <td><img src="assets/images/table_im2.svg" alt=""><span
+                                                            class="table_txt">TK</span></td>
+                                                    <td><img src="assets/images/table_im3.svg" alt=""><span
+                                                            class="table_txt">A</span></td>
+                                                    <td><img src="assets/images/table_im4.svg" alt=""><span
+                                                            class="table_txt">Checked baggage
+                                                            allowance</span></td>
+                                                    <td><img src="assets/images/table_im5.svg" alt=""><span
+                                                            class="table_txt">2
+                                                            Piece</span></td>
+                                                </tr>
+                                                <tr class="space_height">
+                                                    <th><img src="assets/images/table_im1.svg" alt=""><span
+                                                            class="table_txt">Adult</span></th>
+                                                    <td><img src="assets/images/table_im2.svg" alt=""><span
+                                                            class="table_txt">TK</span></td>
+                                                    <td><img src="assets/images/table_im3.svg" alt=""><span
+                                                            class="table_txt">A</span></td>
+                                                    <td><img src="assets/images/table_im4.svg" alt=""><span
+                                                            class="table_txt">Checked baggage
+                                                            allowance</span></td>
+                                                    <td><img src="assets/images/table_im5.svg" alt=""><span
+                                                            class="table_txt">2
+                                                            Piece</span></td>
+                                                </tr>
+                                                <tr class="space_height">
+                                                    <th><img src="assets/images/table_im1.svg" alt=""><span
+                                                            class="table_txt">Adult</span></th>
+                                                    <td><img src="assets/images/table_im2.svg" alt=""><span
+                                                            class="table_txt">TK</span></td>
+                                                    <td><img src="assets/images/table_im3.svg" alt=""><span
+                                                            class="table_txt">A</span></td>
+                                                    <td><img src="assets/images/table_im4.svg" alt=""><span
+                                                            class="table_txt">Checked baggage
+                                                            allowance</span></td>
+                                                    <td><img src="assets/images/table_im5.svg" alt=""><span
+                                                            class="table_txt">2
+                                                            Piece</span></td>
+                                                </tr>
+                                                <tr class="space_height">
+                                                    <th><img src="assets/images/table_im1.svg" alt=""><span
+                                                            class="table_txt">Adult</span></th>
+                                                    <td><img src="assets/images/table_im2.svg" alt=""><span
+                                                            class="table_txt">TK</span></td>
+                                                    <td><img src="assets/images/table_im3.svg" alt=""><span
+                                                            class="table_txt">A</span></td>
+                                                    <td><img src="assets/images/table_im4.svg" alt=""><span
+                                                            class="table_txt">Checked baggage
+                                                            allowance</span></td>
+                                                    <td><img src="assets/images/table_im5.svg" alt=""><span
+                                                            class="table_txt">2
+                                                            Piece</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="bookNowBtn text-end">
+                                    <button type="button" class="btn btn-bookNow">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="fareDetail" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="fare_flex">
+                                <div class="fare_items">
+                                    <p class="fare_hdr_item">Base Fare:</p>
+                                    <p class="fare_ftr_item"><span>PKR 341330</span></p>
+                                </div>
+                                <div class="fare_items">
+                                    <p class="fare_hdr_item">Handling Charges:</p>
+                                    <p class="fare_ftr_item"><span>PKR 0</span></p>
+                                </div>
+                                <div class="fare_items">
+                                    <p class="fare_hdr_item">Taxes & Fee:</p>
+                                    <p class="fare_ftr_item"><span>PKR 174057</span></p>
+                                </div>
+                                <div class="fare_items">
+                                    <p class="fare_hdr_item">Total (incl. VAT):</p>
+                                    <p class="fare_ftr_item"><span>PKR 515387</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="downlaod-app-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="app-content">
+                        <h1 class="app-heading mb-3">Download This App!</h1>
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero
+                            et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia nostra, per inceptos himenaeos.</p>
+                        <div class="store-img-box d-flex align-items-center">
+                            <img src="assets/images/play-store.png" alt="play-store" class="me-2">
+                            <img src="assets/images/app-store.png" alt="app-store">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="app-img-box">
+                        <img src="assets/images/app-img.png" class="img-fluid" alt="photo">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <!-- Popper CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Date Pickr JS -->
+    <script src="assets/js/utils/picker.js"></script>
+    <script src="assets/js/utils/picker.date.js"></script>
+    <!-- Carousel JS -->
+    <script src="assets/js/utils/carosel.min.js"></script>
+    <!-- Moment CDN JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- Lite Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <!-- Nice Select jQuery CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
+    <!-- Flat Pickr CDN JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Common JS -->
+    <script src="assets/js/common-js.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/custom/main.js"></script>
+    <script src="assets/js/custom/search.js"></script>
+</body>
+
+</html>
